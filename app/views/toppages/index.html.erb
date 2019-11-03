@@ -3,7 +3,9 @@
     <div class="cover-inner">
       <div class="cover-contents">
         <h1>The place for meeting something good</h1>
-        <a href="" class="btn btn-success btn-lg">Start Monolist</a>
+        <% unless logged_in? %>
+          <%= link_to 'Start MonoList', signup_path, class: 'btn btn-success btn-lg'%>
+        <% end %>
       </div>
     </div>
   </div>
