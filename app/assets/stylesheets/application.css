@@ -54,3 +54,11 @@
    font-weight: bold;
    letter-spacing: 0.15em;
  }
+
+ .search {
+   margin-bottom: 20px;
+ }
+
+ .item .panel-body {
+   height: 250px;
+ }

@@ -1,17 +1,19 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
+  get 'items/new'
 
-  get 'sessions/create'
+  # get 'sessions/new'
 
-  get 'sessions/destroy'
+  # get 'sessions/create'
 
-  get 'users/show'
+  # get 'sessions/destroy'
 
-  get 'users/new'
+  # get 'users/show'
 
-  get 'users/create'
+  # get 'users/new'
 
-  get 'toppages/index'
+  # get 'users/create'
+
+  # get 'toppages/index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to:'toppages#index'
@@ -20,4 +22,5 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy'
   get 'signup', to: 'users#new'
   resources :users, only: [:show, :new, :create]
+  resources :items, only:[:new]
 end
