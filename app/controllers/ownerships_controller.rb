@@ -11,8 +11,14 @@ class OwnershipsController < ApplicationController
 
     if params[:type] == 'Want'
       current_user.want(@item)
-      flash[:success] = 'Successfully saved want.'
+      flash[:success] = 'Successfully saved as want.'
     end
+
+    if params[:type] == 'Have'
+      current_user.have(@item)
+      flash[:success] = 'Successfully saved as have.'
+    end 
+
     redirect_back(fallback_location: root_path)
   end
 
@@ -22,6 +28,11 @@ class OwnershipsController < ApplicationController
     if params[:type] == 'Want'
       current_user.unwant(@item)
       flash[:success] = 'Successfully remove want'
+    end
+
+    if params[:type] == 'Have'
+      current_user.unhave(@item)
+      flash[:success] = 'Successfully remove have'
     end
 
     redirect_back(fallback_location: root_path)
