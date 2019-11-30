@@ -1,6 +1,6 @@
 RakutenWebService.configure do |c|
   # (Required) Appliction ID for your application.
-  c.application_id = 'YOUR_APPLICATION_ID'
+  c.application_id = ENV['APPLICATION_ID']
 
   # (Optional) Affiliate ID for your Rakuten account.
   c.affiliate_id = 'YOUR_AFFILIATE_ID' # default: nil
